@@ -26,21 +26,21 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-51821a981fea9e4aed47.js"
+    "url": "webpack-runtime-c999171fe21afd0a7a2a.js"
   },
   {
-    "url": "app-c90ca81c6d55042fe29c.js"
+    "url": "app-6a7506c4bb9979d7401d.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-987327b1402b4ef14847.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "2568e956cb3b67b42170d36f99a69bd4"
+    "revision": "687bcd1b570f9dbd144e4dca2f860cc9"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "f9b4fbec01ef90dd1df44abf2afffd1a"
+    "revision": "635af27100168833743d8d92f4f0a347"
   },
   {
     "url": "manifest.webmanifest",
@@ -63,12 +63,12 @@ const { NavigationRoute } = workbox.routing
 
 const navigationRoute = new NavigationRoute(async ({ event }) => {
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/blog-boilerplate`), ``)
+  pathname = pathname.replace(new RegExp(`^/./blog-boilerplate`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/blog-boilerplate/app-c90ca81c6d55042fe29c.js`))) {
+  if (!resources || !(await caches.match(`/./blog-boilerplate/app-6a7506c4bb9979d7401d.js`))) {
     return await fetch(event.request)
   }
 
@@ -81,7 +81,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/blog-boilerplate/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/./blog-boilerplate/offline-plugin-app-shell-fallback/index.html`
   return await caches.match(offlineShell)
 })
 
