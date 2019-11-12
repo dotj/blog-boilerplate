@@ -1,5 +1,25 @@
 import Typography from 'typography'
-import theme from 'typography-theme-de-young'
+import theme from 'typography-theme-fairy-gates'
+
+theme.googleFonts = [
+  {
+    name: 'Open Sans',
+    styles: [
+      '300',
+    ],
+  },
+  {
+    name: 'Sorts Mill Goudy',
+    styles: [
+      '400'
+    ],
+  },
+]
+
+theme.baseFontSize = '18px'
+theme.scaleRatio = 2
+theme.headerFontFamily = ['Open Sans', 'sans-serif']
+theme.bodyFontFamily = ['Sorts Mill Goudy', 'serif']
 
 const typography = new Typography(theme)
 

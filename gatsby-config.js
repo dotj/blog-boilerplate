@@ -1,28 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog Template`,
-    author: `Julie T. Do`,
-    description: `A template for future blogs and documentation`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
-    social: {
-      twitter: `hellojuliedo`,
-      github: `dotj`,
-      linkedin: `julietdo`
-    },
+    title: 'Gatsby Typescript Starter Blog',
+    description:
+      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+    author: '@gatsbyjs',
   },
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        pathToConfigModule: `src/utils/typography`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/blog`,
+        name: 'blog',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: 'assets',
       },
     },
     {
@@ -32,49 +33,43 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 500,
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
+            resolve: 'gatsby-remark-external-links',
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
             },
           },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+          `gatsby-remark-responsive-iframe`,
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-typescript',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-plugin-feed`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        name: 'gatsby-starter-default',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    'gatsby-plugin-offline',
   ],
 }
