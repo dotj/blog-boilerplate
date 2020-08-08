@@ -1,6 +1,10 @@
 ---
 title: Post Two
-date: "2016"
+icon: 🐶
+date: "2016-03-01"
+featuredImage: './brant.png'
+tags: test
+description: Lorem ipsum
 ---
 
 # Veggie ipsum

@@ -1,6 +1,9 @@
 ---
 title: Post Three
-date: "2019-10-01"
+icon: 🐶
+date: 2016-06-01
+featuredImage: './brant.png'
+tags: test
 description: Photos and stuff
 ---
 

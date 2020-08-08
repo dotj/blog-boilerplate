@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Blog Template',
+    title: 'Blog Template',
     description:
       'A basic Gatsby Typescript blog template with support for images',
     author: '@gatsbyjs',
