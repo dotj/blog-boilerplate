@@ -5,7 +5,7 @@ module.exports = {
       'A basic Gatsby Typescript blog template with support for images',
     author: '@gatsbyjs',
   },
-  pathPrefix: "/blog-boilerplate",
+  pathPrefix: "/blog-template",
   plugins: [
     {
       resolve: `gatsby-plugin-google-fonts`,

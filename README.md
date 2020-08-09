@@ -1,6 +1,6 @@
-# blog-boilerplate
+# blog-template
 
-This is a custom blog boilerplate using Gatsby.
+This is a custom blog template using Gatsby.
 
 ## Usage
 

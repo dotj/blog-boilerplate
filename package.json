@@ -17,7 +17,7 @@
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dotj/blog-boilerplate"
+    "url": "https://github.com/dotj/blog-template"
   },
   "dependencies": {
     "gatsby": "^2.0.53",
