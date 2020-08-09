@@ -8,10 +8,16 @@ module.exports = {
   pathPrefix: "/blog-boilerplate",
   plugins: [
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
+        fonts: [
+          `limelight`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+          `Lato\:300,300i,400,400i`,
+          `Inconsolata\:200,300,400`
+        ],
+        display: 'swap'
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -34,7 +40,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 500,
+              maxWidth: 600,
+              showCaptions: true,
+              tracedSVG: true
             },
           },
           {
@@ -71,6 +79,6 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    'gatsby-plugin-offline'
   ],
 }

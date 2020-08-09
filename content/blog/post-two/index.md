@@ -2,7 +2,7 @@
 title: Post Two
 icon: 🐶
 date: "2016-03-01"
-featuredImage: './brant.png'
+featuredImage: './bench-accounting-unsplash.jpg'
 tags: test
 description: Lorem ipsum
 ---
